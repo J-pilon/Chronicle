@@ -61,7 +61,7 @@ Finally, run `npm run server` to start the backend server.
 In another terminal, `cd` into *react-front-end* folder. Run `npm install` to install the dependencies. Then run `npm start` and go to *localhost:3000* in your browser.
 
 ## Missing Features
-* There isn't a login/logout feature currently. If you were to click on the logout button the app will crash. This feature will be added in the future. 
+* There isn't a login/logout feature currently. If you were to click on the logout button you will be redirected to the home page. This feature will be added in the future. 
 
 ## Dependencies
   - react 17.0.2
