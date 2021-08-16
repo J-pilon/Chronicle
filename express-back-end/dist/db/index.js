@@ -1,8 +1,18 @@
-import pg from "pg";
-const client = new pg.Client({
-    connectionString: process.env.DATABASE_URL || ""
+import { Pool } from "pg";
+import dotenv from 'dotenv';
+
+const PORT = 8080;
+
+dotenv.config();
+
+const pool = new Pool({ 
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    port: PORT
 });
-client
-    .connect()
-    .catch(e => console.log(`Error connecting to Postgres server:\n${e}`));
-module.exports = client;
+
+pool.connect()
+    .catch(err => console.log(`Error connecting to Postgres server:\n${err}`));
+
+export default pool;
