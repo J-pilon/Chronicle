@@ -1,14 +1,8 @@
 import Express from "express";
+import pool from "./db/index";
+
 const App = Express();
-const PORT = 8080;
-import dotenv from 'dotenv';
-dotenv.config();
-import pg from 'pg';
-const connectionString = process.env.DATABASE_URL ||
-    `postgresql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?sslmode=disable`;
-const pool = new pg.Pool({ connectionString });
-pool.connect()
-    .catch(e => console.log(`Error connecting to Postgres server:\n${e}`));
+
 const getEntriesByCategory = (userId, params) => {
     const { startDate, endDate, mood, limit, categoryId } = params;
     const queryParams = [userId];
