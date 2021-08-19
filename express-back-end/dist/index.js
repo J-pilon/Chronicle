@@ -6,12 +6,7 @@ const App = Express();
 
 
 
-const getCategories = (userId) => {
-    const query = `SELECT * FROM categories
-  WHERE user_id = $1`;
-    const queryParams = [userId];
-    return pool.query(query, queryParams);
-};
+
 const getUserByUserId = (id) => {
     const query = `
   SELECT users.*,
@@ -55,9 +50,7 @@ const insertIntoDatabase = (attributes, table) => {
     const queryString = queryStart + queryMid + queryEnd;
     return pool.query(queryString, queryParams);
 };
-const insertCategory = (attributes) => {
-    return insertIntoDatabase(attributes, 'categories');
-};
+
 
 const insertUser = (attributes) => {
     return insertIntoDatabase(attributes, 'users');
