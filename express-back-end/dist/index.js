@@ -44,13 +44,7 @@ const getEntriesByCategory = (userId, params) => {
     let query = queryStart + queryMid + queryEnd;
     return pool.query(query, queryParams);
 };
-const getEntryByEntryId = (attributes) => {
-    const { entryId, userId } = attributes;
-    const query = `SELECT *, TO_CHAR(date_created, 'YYYY-MM-DD') as date FROM entries
-  WHERE user_id = $1 AND id = $2;`;
-    const queryParams = [userId, entryId];
-    return pool.query(query, queryParams);
-};
+
 const getGraphByUserId = (userId, params) => {
     const { type, startDate, endDate } = params;
     const queryParams = [userId];
@@ -137,9 +131,7 @@ const insertIntoDatabase = (attributes, table) => {
 const insertCategory = (attributes) => {
     return insertIntoDatabase(attributes, 'categories');
 };
-const insertEntry = (attributes) => {
-    return insertIntoDatabase(attributes, 'entries');
-};
+
 const insertUser = (attributes) => {
     return insertIntoDatabase(attributes, 'users');
 };
