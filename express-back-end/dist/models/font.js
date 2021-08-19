@@ -11,3 +11,5 @@ const getFonts = () => {
   const query = 'SELECT * FROM fonts';
   return pool.query(query);
 };
+
+export default { getFontByFontId, getFonts };

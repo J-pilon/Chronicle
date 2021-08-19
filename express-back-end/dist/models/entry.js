@@ -11,3 +11,5 @@ WHERE user_id = $1 AND id = $2;`;
 const insertEntry = (attributes) => {
   return insertIntoDatabase(attributes, 'entries');
 };
+
+export default { getEntryByEntryId, insertEntry };

@@ -31,3 +31,5 @@ const insertIntoDatabase = (attributes, table) => {
 const insertCategory = (attributes) => {
   return insertIntoDatabase(attributes, 'categories');
 };
+
+export default { getCategories, insertCategory };

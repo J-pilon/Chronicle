@@ -25,3 +25,5 @@ const getGraphByUserId = (userId, params) => {
   const query = queryStart + queryMid + queryEnd;
   return pool.query(query, queryParams);
 };
+
+export default getGraphByUserId;

@@ -48,3 +48,5 @@ const insertIntoDatabase = (attributes, table) => {
 const insertUser = (attributes) => {
   return insertIntoDatabase(attributes, 'users');
 };
+
+export default { getUsers, getUserByUserId, insertUser };

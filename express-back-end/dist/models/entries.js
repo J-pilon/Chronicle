@@ -41,3 +41,5 @@ const getEntriesByCategory = (userId, params) => {
   let query = queryStart + queryMid + queryEnd;
   return pool.query(query, queryParams);
 };
+
+export default getEntriesByCategory;
