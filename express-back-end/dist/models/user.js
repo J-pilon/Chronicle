@@ -1,8 +1,9 @@
+import pool from "./db/index";
+
 const getUsers = () => {
   const query = 'SELECT * FROM users';
   return pool.query(query);
 };
-
 
 const getUserByUserId = (id) => {
   const query = `

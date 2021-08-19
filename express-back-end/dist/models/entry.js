@@ -1,3 +1,5 @@
+import pool from "./db/index";
+
 const getEntryByEntryId = (attributes) => {
   const { entryId, userId } = attributes;
   const query = `SELECT *, TO_CHAR(date_created, 'YYYY-MM-DD') as date FROM entries

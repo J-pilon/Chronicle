@@ -1,3 +1,5 @@
+import pool from "./db/index";
+
 const getCategories = (userId) => {
   const query = `SELECT * FROM categories
 WHERE user_id = $1`;

@@ -1,3 +1,5 @@
+import pool from "./db/index";
+
 const getGraphByUserId = (userId, params) => {
   const { type, startDate, endDate } = params;
   const queryParams = [userId];

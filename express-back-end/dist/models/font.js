@@ -1,3 +1,5 @@
+import pool from "./db/index";
+
 const getFontByFontId = (id) => {
   const query = `SELECT * FROM fonts
 WHERE id = $1;`;

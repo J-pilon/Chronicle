@@ -1,3 +1,5 @@
+import pool from "./db/index";
+
 const getEntriesByCategory = (userId, params) => {
   const { startDate, endDate, mood, limit, categoryId } = params;
   const queryParams = [userId];
