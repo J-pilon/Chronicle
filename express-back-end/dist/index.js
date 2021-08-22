@@ -1,7 +1,14 @@
 import Express from "express";
+const App = Express();
 import pool from "./db/index";
 
-const App = Express();
+import { getCategories, insertCategory } from "./models/categories";
+import getEntriesByCategory from "./models/entries";
+import { getEntryByEntryId, insertEntry } from "./models/entry";
+import { getFontByFontId, getFonts } from "./models/font";
+import getGraphByUserId from "./models/graph";
+import { getUsers, getUserByUserId, insertUser } from "./models/user";
+
 
 const updateDatabase = (attributes, identifiers) => {
     const { table, type, id } = identifiers;
