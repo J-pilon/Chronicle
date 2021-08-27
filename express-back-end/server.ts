@@ -1,16 +1,26 @@
 import Express, { Request, Response } from "express";
 const App = Express();
-const PORT = 8080;
-import dotenv from 'dotenv';
-dotenv.config();
 
-// Setup database for queries
-import pg from 'pg';
-const connectionString = process.env.DATABASE_URL ||
-    `postgresql://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}?sslmode=disable`;
-const pool = new pg.Pool({connectionString});
-pool.connect()
-  .catch(e => console.log(`Error connecting to Postgres server:\n${e}`));
+const PORT = 8080;
+
+// Hardcoded userId for development
+const userId = '1';
+
+// import pg from 'pg';
+// import dotenv from 'dotenv';
+// dotenv.config();
+
+// const pool = new pg.Pool({
+//   user: process.env.DB_USER,
+//   database: process.env.DB_NAME,
+//   password: process.env.DB_PASS,
+//   port: process.env.DB_PORT,
+//   host: process.env.DB_HOST,
+// })
+
+// pool.connect()
+//   .then(() => console.log("Connected to Postgres server"))
+//   .catch(err => console.log(`Error connection to postgres server:\n${err}`)) 
 
   interface ICategory {
     id?: string | number;
@@ -31,7 +41,6 @@ pool.connect()
     dateCreated?: string;
     bodyFontId?: string | number;
     titleFontId?: string | number;
-    
   }
 
   interface IEntry {
@@ -84,9 +93,6 @@ const updateDatabase = (attributes: IEntry | IUser | ICategory, identifiers: { t
 App.use(Express.urlencoded({ extended: false }));
 App.use(Express.json());
 App.use(Express.static('public'));
-
-// Hardcoded userId for development
-const userId = '1';
 
 App.get('/api/entries', (req: Request, res: Response) => {
   getEntriesByCategory(userId, req.query)
