@@ -2,7 +2,7 @@ import pg from 'pg';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const pool = new pg.pool({
+const pool = new pg.Pool({
   user: process.env.DB_USER,
   database: process.env.DB_NAME,
   password: process.env.DB_PASS,
@@ -12,6 +12,6 @@ const pool = new pg.pool({
 
 pool.connect()
   .then(() => console.log("Connected to Postgres server"))
-  .catch(err => console.log(`Error connection to postgres server:\n${err}`)) 
+  .catch((e: string) => console.log(`Error connection to postgres server:\n${e}`)) 
 
 export default pool;

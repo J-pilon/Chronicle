@@ -1,3 +1,5 @@
+import pool from "../../db/connection"
+
 interface ICategory {
   id?: string | number;
   name?: string;

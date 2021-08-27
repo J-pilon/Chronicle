@@ -1,3 +1,5 @@
+import pool from "../../db/connection"
+
 interface IEntryParams {
   startDate?: string | null;
   endDate?: string | null;

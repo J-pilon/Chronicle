@@ -1,3 +1,4 @@
+import pool from "../../db/connection"
 interface IUser {
   id?: string | number;
   username?: string;

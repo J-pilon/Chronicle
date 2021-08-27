@@ -1,3 +1,4 @@
+import pool from "../../db/connection"
 interface IGraphParams {
   type?: string;
   startDate?: string | null;
