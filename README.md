@@ -1,39 +1,48 @@
-# Chronicle
+# 📓 Chronicle
 
-A private journaling web app designed to help you keep track of your mood over time and store your journal entries for you to look back on.
+**Chronicle** is a private journaling web application designed to help you reflect on your mood over time and store your journal entries in a secure, personal space.
 
-Created by [Tessa](https://github.com/TeyyaM), [Josiah](https://github.com/J-pilon) and [Sam](https://github.com/brackish888).
+Built with ❤️ by [Tessa](https://github.com/TeyyaM), [Josiah](https://github.com/J-pilon) and [Sam](https://github.com/brackish888), this was our final project at **Lighthouse Labs Web Development Bootcamp**, built to showcase the practical skills and collaborative workflows we developed during the course.
 
-This was designed and implemented as a way to showcase the skills that were learned in the [Lighthouse Labs Web Development](https://github.com/lighthouse-labs) bootcamp and is considered our final project of the course. 
+---
 
-Within this project we used many tools introduced to us such as:
-  - React
-  - *Typescript*
-  - Express
-  - Jest
-  - HTML
-  - Css and SaSS
-  - Cypress
-  - Axios
-  - Node
-  - PostgreSQL
+## 🚀 Tech Stack
 
-*In a way to simulate realworld experiences we decided to use Typescript as our main programming language, one that we had not covered in the course*
+To simulate real-world development, we used a variety of tools introduced in the program—and a few we explored on our own, like TypeScript.
 
-We started the project with a _no fluff_ React/Express boilerplate supplied by @garrettgsb and can be found [here.](https://github.com/garrettgsb/react-express-boilerplate)
+- **Frontend**: React, TypeScript, Axios, HTML, CSS, Sass
+- **Backend**: Express, Node.js, PostgreSQL
+- **Testing**: Cypress, Jest
+- **Tooling**: dotenv, ESLint, Prettier
 
-## Features
-  - Home page Journaling form
-    - Write, post, save and edit journal entries
-    - Give each entry a Category (or none) to help you keep track of certain memories
-    - Give your post a mood to track your progress over time
-  - Customize your journaling experience!
-    - change your background, secondary, accent, text and form colours
-  - Reference your past entries by Category or by Date
-    - Graph your mood overtime with a dynamic date picker that lets you pick the intervals that you want to graph.
+> We chose **TypeScript** even though it wasn’t taught in the course, to challenge ourselves and follow best practices in type-safe application development.
 
-!["Video of homepage"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-03.gif)
-!["Video of entries"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-10.gif)
+The project was bootstrapped using a no-fluff [React/Express boilerplate](https://github.com/garrettgsb/no-fluff-react-express) by @garrettgsb.
+
+---
+
+## ✨ Features
+
+- 📝 **Journal Entry Form**  
+  Write, save, and edit your personal journal entries.
+
+- 🎭 **Mood & Category Tracking**  
+  Tag entries with custom moods and categories to track your emotional state and revisit memories by topic.
+
+- 🎨 **Customization**  
+  Personalize your journaling space with customizable colors for background, text, accents, and more.
+
+- 📅 **Entry Filtering**  
+  Browse your journal entries by **category** or **date**.
+
+- 📈 **Mood Graphing**  
+  Visualize your mood trends over time using a dynamic date picker with interval controls.
+
+- 🎥 **Demos**  
+  - !["Video of homepage"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-03.gif)
+  - !["Video of entries"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-10.gif)
+
+---
 
 ## Getting started! 
 
