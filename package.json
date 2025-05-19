@@ -1,10 +1,10 @@
 {
   "name": "chronicle",
   "version": "1.0.0",
-  "private": false,
   "scripts": {
-    "start": "concurrently \"cd react-front-end && npm start\" \"cd express-back-end && npm run server\"",
-    "install-all": "npm install && cd react-front-end && npm install && cd ../express-back-end && npm install"
+    "start": "concurrently \"cd client && npm start\" \"cd server && npm run server\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "setup-db": "cd server && npm run db:reset-seeds"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
