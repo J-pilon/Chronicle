@@ -1,25 +1,39 @@
 # 📓 Chronicle
 
-**Chronicle** is a private journaling web application designed to help you reflect on your mood over time and store your journal entries in a secure, personal space.
+**Chronicle** is a private journaling web application designed to help you reflect on your mood over time and store your journal entries in a secure, personal space. Track your emotional journey, organize your thoughts by categories, and visualize your mood trends through an intuitive and customizable interface.
 
 Built with ❤️ by [Tessa](https://github.com/TeyyaM), [Josiah](https://github.com/J-pilon) and [Sam](https://github.com/brackish888), this was our final project at **Lighthouse Labs Web Development Bootcamp**, built to showcase the practical skills and collaborative workflows we developed during the course.
 
----
+## 📋 Table of Contents
+- [Tech Stack](#-tech-stack)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Getting Started](#getting-started)
+- [Development](#development)
+- [Known Limitations](#known-limitations)
 
 ## 🚀 Tech Stack
 
-To simulate real-world development, we used a variety of tools introduced in the program—and a few we explored on our own, like TypeScript.
+### Frontend
+- React
+- TypeScript
+- Axios
+- HTML/CSS
+- Sass
 
-- **Frontend**: React, TypeScript, Axios, HTML, CSS, Sass
-- **Backend**: Express, Node.js, PostgreSQL
-- **Testing**: Cypress, Jest
-- **Tooling**: dotenv, ESLint, Prettier
+### Backend
+- Express
+- Node.js
+- PostgreSQL
 
-> We chose **TypeScript** even though it wasn’t taught in the course, to challenge ourselves and follow best practices in type-safe application development.
+### Testing & Tools
+- Cypress & Jest for testing
+- dotenv for environment variables
+- ESLint & Prettier for code quality
+
+> **Note**: We chose **TypeScript** even though it wasn't taught in the course, to challenge ourselves and follow best practices in type-safe application development.
 
 The project was bootstrapped using a no-fluff [React/Express boilerplate](https://github.com/garrettgsb/no-fluff-react-express) by @garrettgsb.
-
----
 
 ## ✨ Features
 
@@ -38,42 +52,59 @@ The project was bootstrapped using a no-fluff [React/Express boilerplate](https:
 - 📈 **Mood Graphing**  
   Visualize your mood trends over time using a dynamic date picker with interval controls.
 
-- 🎥 **Demos**  
-  - !["Video of homepage"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-03.gif)
-  - !["Video of entries"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-10.gif)
+### Demo Videos
+- !["Video of homepage"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-03.gif)
+- !["Video of entries"](https://raw.githubusercontent.com/J-pilon/Chronicle/21b4b3a94747dbadd7ac047fe378ccafc300b2d0/docs/Peek%202021-06-04%2017-10.gif)
 
----
+## Prerequisites
 
-## Getting started! 
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- PostgreSQL (v12 or higher)
 
-Fork this repository, then clone your fork onto your machine.
+## Getting Started
 
-You will need **TWO** terminal windows/tabs to run this (or some other plan for running two Node processes).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/chronicle.git
+   cd chronicle
+   ```
 
-In one terminal, `cd` into *express-back-end*. Run `npm install` to install the dependencies.
+2. Set up environment variables:
+   ```bash
+   cp server/.env.example server/.env
+   ```
+   Edit `server/.env` and add your database credentials.
 
-After the dependencies are installed and while your in the same folder, create a *.env* file using these secret variables but set to your information:
-* DB_HOST=localhost
-* DB_USER=database_username
-* DB_PASS=database_password
-* DB_NAME=database_name
-* DB_PORT=5432
+3. Install dependencies and set up the database:
+   ```bash
+   npm run install-all
+   npm run setup-db
+   ```
 
-Then you have the option to run `npm run db:reset` to seed the database with fake data or to have a blank database:
-1. comment/uncomment the necessary code in the file *express-back-end/bin/resetdb.ts*  
-2. run `tsc` in your terminal in the *express-back-end* directory
-3. run `npm run db:reset` in the same terminal
+## Development
 
-Finally, run `npm run server` to start the backend server.
-(this will run on localhost:3000)
+You can run the application in two ways:
 
-In another terminal, `cd` into *react-front-end* folder. Run `npm install` to install the dependencies. Then run `npm start` and go to *localhost:3000* in your browser.
+### Option 1: Run both client and server concurrently
+```bash
+npm run start
+```
 
-## Missing Features
-* There isn't a login/logout feature currently. If you were to click on the logout button you will be redirected to the home page. This feature will be added in the future. 
+### Option 2: Run client and server separately
+1. Start the client:
+   ```bash
+   cd client
+   npm run start
+   ```
 
-## Dependencies
-  - react 17.0.2
-  - typescript 4.2.4
-  - node 14.16.0
-  - npm 6.14.11
+2. In a new terminal, start the server:
+   ```bash
+   cd server
+   npm run server
+   ```
+
+## Known Limitations
+
+- 🔒 **Authentication**: The login/logout feature is currently not implemented. Clicking the logout button will redirect to the home page. This feature will be added in a future update.

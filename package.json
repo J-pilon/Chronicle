@@ -1,0 +1,12 @@
+{
+  "name": "chronicle",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"cd client && npm start\" \"cd server && npm run server\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "setup-db": "cd server && npm run db:reset-seeds"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
