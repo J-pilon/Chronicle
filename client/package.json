@@ -1,7 +1,6 @@
 {
-  "name": "react-front-end",
+  "name": "chronicle-client",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",
     "@devexpress/dx-react-chart": "^2.7.5",

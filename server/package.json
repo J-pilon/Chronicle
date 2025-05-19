@@ -1,5 +1,5 @@
 {
-  "name": "express-back-end",
+  "name": "chronicle-server",
   "version": "1.0.0",
   "description": "Boilerplate for the Express backend in an Express-React project",
   "main": "server.js",
